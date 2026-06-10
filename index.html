@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -26,23 +27,28 @@
                 <h2>shoting:</h2>
             </div>
             <button onclick="Start()">start game</button>
-            
+
 
         </div>
         <div id="ui" class="hidden">
-            <div class=""></div>
+            <div class="table-res">
+                <h2>Scrole : 100</h2>
+                <button onclick="pause()"><i class="fa-solid fa-pause"></i></button>
+                <h2>time : 03:56</h2>
+            </div>
         </div>
         <!-- Pause menu -->
         <div id="pause-menu" class="hidden">
             <div class="menu-game">
-                <button id="continue-btn">Continue</button>
-                <button id="restart-btn">Restart</button>
-                <button id="exit-btn">Exit</button>
+                <div class="controls-menu">
+                    <button id="continue-btn" onclick="pause()">Continue</button>
+                    <button id="restart-btn" onclick="restart()">Restart</button>
+                    <button id="exit-btn" onclick="Exit()">Exit</button>
+                </div>
             </div>
         </div>
         <div id="gameOver" class="hidden"></div>
     </div>
-
 </body>
 <script src="src/js.js"></script>
 </html>

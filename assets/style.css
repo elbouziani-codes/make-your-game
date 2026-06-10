@@ -69,9 +69,70 @@
     color: #F3E5BF;
     -webkit-text-stroke: 2px black;
 }
-#pause-menu{
+
+#ui .table-res{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-inline: 5%;
 }
+#ui .table-res button{
+    all: unset;
+    background-color: red;
+    padding: 10px;
+    color:white;
+    transition: 0.2s all ease-in-out;
+}
+#ui .table-res button:hover{
+    scale: 1.05;
+    background-color: rgb(160, 0, 0);
+}
+#pause-menu{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left :0;
+    z-index: 100;
+    background-color: rgba(1, 0, 17 , 0.5);
+}
+#pause-menu .menu-game{
+    position: relative;
+    top: calc(50% - 150px);
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 300px;
+    background-color: rgb(91, 91, 91);
+}
+#pause-menu .menu-game .controls-menu{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-evenly;
+    transition: 0.2s all ease-in-out;
+    & button{
+        all: unset;
+        width: 80%;
+        margin-inline: 10%;
+        padding-block: 15px;
+        background-color: red;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        
+        &:hover{
+            color: black;
+            background-color: rgb(160, 0, 0);
+            font-size: 32px;
+            font-weight:bold;
+        }
+    }
+}
+
 
 .hidden {
     display: none !important;
